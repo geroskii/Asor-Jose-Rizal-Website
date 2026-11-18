@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>José Rizal: Life, Works & Legacy</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <a class="brand" onclick="navigateTo('home')">
+                <div class="monogram"><img class="jose-rizal-portrait" src="images\Jose-Rizal-Portrait.jpg" alt="joserizal"></div>
+                <div class="brand-title">Dr. José Rizal</div>
+            </a>
+            <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">&#9776;</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" onclick="navigateTo('home')" class="nav-item active" data-target="home">Home</a></li>
+                <li><a href="#" onclick="navigateTo('biography')" class="nav-item" data-target="biography">Biography</a></li>
+                <li><a href="#" onclick="navigateTo('works')" class="nav-item" data-target="works">Literary Works</a></li>
+                <li><a href="#" onclick="navigateTo('timeline')" class="nav-item" data-target="timeline">Timeline</a></li>
+                <li><a href="#" onclick="navigateTo('legacy')" class="nav-item" data-target="legacy">Legacy</a></li>
+                <li><a href="#" onclick="navigateTo('gallery')" class="nav-item" data-target="gallery">Gallery</a></li>
+                <li><a href="#" onclick="navigateTo('quiz')" class="nav-item" data-target="quiz">Quiz</a></li>
+                <li><a href="#" onclick="navigateTo('about')" class="nav-item" data-target="about">About</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+
+        <!-- HOME PAGE -->
+        <section id="home" class="page-section active">
+            <div class="hero">
+                <div class="eyebrow">The Life and Legacy of a National Hero</div>
+                <h1>José Rizal: Life, Works & Legacy</h1>
+                <p>Discover the life, writings, and ideals of the man whose words helped awaken Filipino national consciousness and inspire a nation.</p>
+                <div class="hero-buttons">
+                    <button class="btn" onclick="navigateTo('biography')">Explore His Story</button>
+                    <button class="btn btn-outline" style="color: var(--dark-brown); border-color: var(--parchment);" onclick="navigateTo('works')">Discover His Works</button>
+                </div>
+            </div>
+
+            <div class="intro-grid">
+                <img class="jose-rizal-historical" src="images\jose-rizal-historical-portrait.jpg" alt="">
+                <div class="intro-text">
+                    <div class="eyebrow">Historical Overview</div>
+                    <h2>The Man Behind the Legacy</h2>
+                    <p>Dr. José Rizal (June 19, 1861 – December 30, 1896) was a Filipino nationalist, physician, ophthalmologist, poet, and novelist. As a key member of the Propaganda Movement, his brilliant literary works peacefully exposed the injustices of Spanish colonial rule in the Philippines.</p>
+                    <p>Though executed by firing squad at Bagumbayan, his martyrdom galvanized the Philippine Revolution and cemented his status as the national hero.</p>
+                    <button class="btn" onclick="navigateTo('biography')">Read Full Biography &rarr;</button>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <div class="eyebrow">Digital Museum Highlights</div>
+                <h2>Explore the Exhibition</h2>
+                <div class="ornament-divider">&#10086;</div>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div>
+                        <h3>His Life</h3>
+                        <p>Trace Rizal's journey from his birth in Calamba, Laguna, to his education in Europe and martyrdom in Dapitan and Manila.</p>
+                    </div>
+                    <button class="btn btn-outline" onclick="navigateTo('biography')">View Biography</button>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>Literary Works</h3>
+                        <p>Explore his seminal novels <em>Noli Me Tangere</em> and <em>El Filibusterismo</em>, alongside his timeless poems and political essays.</p>
+                    </div>
+                    <button class="btn btn-outline" onclick="navigateTo('works')">Explore Works</button>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>Timeline</h3>
+                        <p>Follow the chronological milestones of his extraordinary life and historical events that shaped 19th-century Philippines.</p>
+                    </div>
+                    <button class="btn btn-outline" onclick="navigateTo('timeline')">View Timeline</button>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>Interactive Quiz</h3>
+                        <p>Test your knowledge of Rizal's life, literary contributions, historical dates, and enduring legacy through an interactive quiz.</p>
+                    </div>
+                    <button class="btn btn-outline" onclick="navigateTo('quiz')">Take Quiz</button>
+                </div>
+            </div>
+
+            <div class="quote-box">
+                <blockquote>“There are no tyrants where there are no slaves.”</blockquote>
+                <cite>— Dr. José Rizal, The Social Cancer (Noli Me Tangere)</cite>
+            </div>
+        </section>
+
+        <!-- BIOGRAPHY PAGE -->
+        <section id="biography" class="page-section">
+            <div class="section-header">
+                <div class="eyebrow">Chronological Chronicle</div>
+                <h1>The Life of José Rizal</h1>
+                <div class="ornament-divider">&#10086;</div>
+            </div>
+
+            <div class="bio-timeline-section">
+                <div class="bio-block">
+                    <span class="bio-date">June 19, 1861 &bull; Calamba, Laguna</span>
+                    <h3>Early Life and Family</h3>
+                    <p>José Protasio Rizal Mercado y Alonso Realonda was born in Calamba, Laguna, the seventh of eleven children born to Francisco Mercado Rizal and Teodora Alonso Realonda. Raised in a prosperous and cultured family, he received his early education from his mother, who taught him reading, poetry, and the alphabet from a remarkably young age.</p>
+                </div>
+
+                <div class="bio-block">
+                    <span class="bio-date">1872 – 1882 &bull; Manila & Higher Education</span>
+                    <h3>Education in the Philippines</h3>
+                    <p>Rizal attended the Ateneo Municipal de Manila, where he earned highest honors, and later pursued philosophy and letters at the University of Santo Tomas before transferring to study medicine and ophthalmology to cure his mother's failing eyesight.</p>
+                </div>
+
+                <div class="bio-block">
+                    <span class="bio-date">1882 – 1887 &bull; Spain, France & Germany</span>
+                    <h3>Life in Europe</h3>
+                    <p>In May 1882, Rizal secretly departed for Spain to complete his medical studies at the Universidad Central de Madrid. Immersed in European liberal arts and sciences, he connected with fellow Filipino reformists in the Propaganda Movement, advocating peacefully for equal rights and representation under the Spanish Cortes.</p>
+                </div>
+
+                <div class="bio-block">
+                    <span class="bio-date">1887 &bull; Berlin & Madrid</span>
+                    <h3>Literary and Reformist Awakening</h3>
+                    <p>Rizal published his debut socio-political novel, <em>Noli Me Tangere</em>, in Berlin in 1887. The work courageously exposed clerical abuses and colonial misrule, making him both a champion of the oppressed and a target of colonial authorities.</p>
+                </div>
+
+                <div class="bio-block">
+                    <span class="bio-date">1892 &bull; Manila & Dapitan</span>
+                    <h3>Return, La Liga Filipina, and Exile</h3>
+                    <p>Returning to Manila in 1892, Rizal founded <em>La Liga Filipina</em>, a civic organization aimed at uniting Filipinos. Shortly after, Spanish authorities arrested him and exiled him to the remote coastal town of Dapitan in Mindanao.</p>
+                </div>
+
+                <div class="bio-block">
+                    <span class="bio-date">1892 – 1896 &bull; Dapitan Exile</span>
+                    <h3>Community Development in Dapitan</h3>
+                    <p>During his four-year exile, Rizal lived a remarkably productive life. He established a school for local boys, practiced ophthalmology, designed the town's water supply and lighting systems, engaged in scientific research (discovering new animal species), and cultivated agriculture.</p>
+                </div>
+
+                <div class="bio-block">
+                    <span class="bio-date">December 30, 1896 &bull; Bagumbayan, Manila</span>
+                    <h3>Trial and Martyrdom</h3>
+                    <p>Implicated falsely in the outbreak of the Philippine Revolution led by the Katipunan, Rizal faced a military trial and was condemned to death. On the morning of December 30, 1896, he was executed by firing squad at Bagumbayan (now Rizal Park), bravely facing his death and cementing his place as the eternal national hero.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- LITERARY WORKS PAGE -->
+        <section id="works" class="page-section">
+            <div class="section-header">
+                <div class="eyebrow">Written Heritage</div>
+                <h1>The Written Legacy</h1>
+                <div class="ornament-divider">&#10086;</div>
+            </div>
+
+            <div class="filter-controls">
+                <input type="text" id="workSearch" class="search-input" placeholder="Search literary works..." onkeyup="filterWorks()">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="setWorkFilter('all', this)">All Works</button>
+                    <button class="filter-btn" onclick="setWorkFilter('novels', this)">Novels</button>
+                    <button class="filter-btn" onclick="setWorkFilter('poems', this)">Poems</button>
+                    <button class="filter-btn" onclick="setWorkFilter('essays', this)">Essays</button>
+                </div>
+            </div>
+
+            <div class="works-grid" id="worksGrid">
+                <!-- Novels -->
+                <div class="work-card" data-category="novels" data-title="noli me tangere">
+                    <div>
+                        <span class="category-tag">Novel</span>
+                        <h3>Noli Me Tangere</h3>
+                        <div class="work-meta">Published in 1887 &bull; Berlin</div>
+                        <p>Rizal’s masterwork exposes the social cancer of Spanish colonial rule and clerical corruption in the Philippines through the eyes of Crisóstomo Ibarra.</p>
+                    </div>
+                    <div>
+                        <p><strong>Themes:</strong> Colonial oppression, education, religious hypocrisy, social reform.</p>
+                        <button class="btn btn-outline" onclick="scrollToNovel('noli-dossier')">Read Summary & Characters &darr;</button>
+                    </div>
+                </div>
+
+                <div class="work-card" data-category="novels" data-title="el filibusterismo">
+                    <div>
+                        <span class="category-tag">Novel</span>
+                        <h3>El Filibusterismo</h3>
+                        <div class="work-meta">Published in 1891 &bull; Ghent</div>
+                        <p>The darker sequel to <em>Noli Me Tangere</em>. It follows the disillusioned jeweler Simoun, who plots a violent revolution against the colonial regime.</p>
+                    </div>
+                    <div>
+                        <p><strong>Themes:</strong> Radicalism, vengeance, futility of violence, systemic reform.</p>
+                        <button class="btn btn-outline" onclick="scrollToNovel('fili-dossier')">Read Summary & Characters &darr;</button>
+                    </div>
+                </div>
+
+                <!-- Poems -->
+                <div class="work-card" data-category="poems" data-title="mi ultimo adios">
+                    <div>
+                        <span class="category-tag">Poem</span>
+                        <h3>Mi Último Adiós</h3>
+                        <div class="work-meta">Written December 1896</div>
+                        <p>Rizal’s poignant final poem, smuggled out of Fort Santiago inside an alcohol stove before his execution. It expresses his profound love for the Philippines.</p>
+                    </div>
+                    <div>
+                        <p><strong>Themes:</strong> Patriotism, self-sacrifice, devotion to country.</p>
+                        <button class="btn btn-outline" onclick="alert('Mi Último Adiós stands as one of the finest masterpieces of Philippine patriotic literature.')">Read Significance</button>
+                    </div>
+                </div>
+
+                <div class="work-card" data-category="poems" data-title="a la juventud filipina">
+                    <div>
+                        <span class="category-tag">Poem</span>
+                        <h3>A La Juventud Filipina</h3>
+                        <div class="work-meta">Published in 1879</div>
+                        <p>An inspiring poem urging Filipino youth to cultivate their talents and rise as the "fair hope of my motherland."</p>
+                    </div>
+                    <div>
+                        <p><strong>Themes:</strong> Youth empowerment, national hope, academic excellence.</p>
+                        <button class="btn btn-outline" onclick="alert('This poem famously called the youth the fair hope of the fatherland.')">Read Significance</button>
+                    </div>
+                </div>
+
+                <div class="work-card" data-category="poems" data-title="sa aking mga kabata">
+                    <div>
+                        <span class="category-tag">Poem (Disputed)</span>
+                        <h3>Sa Aking Mga Kabata</h3>
+                        <div class="work-meta">Attributed to 1869</div>
+                        <p>A famous Tagalog poem celebrating the native language. <em>Note:</em> Modern historical scholarship notes that its authorship by Rizal remains disputed.</p>
+                    </div>
+                    <div>
+                        <p><strong>Themes:</strong> Linguistic pride, love for native language.</p>
+                        <button class="btn btn-outline" onclick="alert('Historians continue to examine its provenance, though it remains a staple in Philippine classrooms.')">Read Significance</button>
+                    </div>
+                </div>
+
+                <!-- Essays -->
+                <div class="work-card" data-category="essays" data-title="the indolence of the filipinos">
+                    <div>
+                        <span class="category-tag">Essay</span>
+                        <h3>The Indolence of the Filipinos</h3>
+                        <div class="work-meta">Published in 1890</div>
+                        <p>A brilliant sociological essay defending Filipinos against the colonial stereotype of laziness, tracing lethargy to systemic oppression and climate.</p>
+                    </div>
+                    <div>
+                        <p><strong>Themes:</strong> Sociological analysis, colonial impact, labor rights.</p>
+                        <button class="btn btn-outline" onclick="alert('Rizal proved that Filipino indolence was a symptom of misgovernance rather than an innate trait.')">Read Significance</button>
+                    </div>
+                </div>
+
+                <div class="work-card" data-category="essays" data-title="the philippines a century hence">
+                    <div>
+                        <span class="category-tag">Essay</span>
+                        <h3>The Philippines a Century Hence</h3>
+                        <div class="work-meta">Published in 1889 – 1890</div>
+                        <p>A visionary geopolitical essay predicting the future of the Philippines over the next hundred years, anticipating eventual independence or American influence.</p>
+                    </div>
+                    <div>
+                        <p><strong>Themes:</strong> Geopolitical forecasting, freedom, sovereignty.</p>
+                        <button class="btn btn-outline" onclick="alert('This essay showcased Rizal’s remarkable political foresight regarding international relations.')">Read Significance</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NOVEL SUMMARIES & CHARACTER COMPENDIUM -->
+            <div class="novels-deep-dive">
+                <div class="section-header">
+                    <div class="eyebrow">Literary Compendium</div>
+                    <h1>Novel Summaries & Character Profiles</h1>
+                    <div class="ornament-divider">&#10086;</div>
+                </div>
+
+                <!-- NOLI ME TANGERE DOSSIER -->
+                <div class="novel-dossier" id="noli-dossier">
+                    <div class="novel-dossier-header">
+                        <h2>Noli Me Tángere (Touch Me Not)</h2>
+                        <span>Published in Berlin, Germany (1887)</span>
+                    </div>
+
+                    <div class="novel-summary-block">
+                        <h3>Plot Summary</h3>
+                        <p>After seven years of studying in Europe, young Filipino mestizo <strong>Juan Crisóstomo Ibarra</strong> returns to his hometown of San Diego filled with idealistic plans to build a modern schoolhouse and uplift his countrymen through education. He is warmly welcomed by his childhood sweetheart, <strong>María Clara</strong>, and her adoptive father, Capitan Tiago, though he soon senses hostility from the town's powerful Franciscan parish priest, <strong>Padre Dámaso</strong>.</p>
+                        <p>Ibarra soon uncovers the dark truth behind his father Don Rafael's death: unjustly imprisoned after defending a child from a cruel tax collector, Don Rafael died in jail and was denied a Christian burial on Padre Dámaso's orders. Despite this heartbreak, Ibarra chooses peaceful reform over vengeance. However, his efforts are repeatedly sabotaged by Padre Dámaso and the scheming new curate, <strong>Padre Salví</strong>, who secretly lusts after María Clara.</p>
+                        <p>When Padre Salví orchestrates a fake insurrection and frames Ibarra as its mastermind, Ibarra is arrested and excommunicated. Aided by the mysterious fugitive <strong>Elías</strong>, Ibarra escapes prison. Before fleeing, he confronts María Clara, who reveals she was blackmailed into handing over his love letters in exchange for proof that Padre Dámaso is her biological father. Pursued by civil guards across Laguna de Bay, Elías sacrifices his own life to save Ibarra. Believing Ibarra dead, a devastated María Clara refuses an arranged marriage and enters the Santa Clara convent.</p>
+                    </div>
+
+                    <h3 class="characters-heading">Major Characters & Descriptions</h3>
+                    <div class="characters-grid">
+                        <div class="character-card">
+                            <h4>Juan Crisóstomo Ibarra</h4>
+                            <span class="character-role">Protagonist &bull; Reformist</span>
+                            <p>An idealistic, European-educated Filipino who returns home hoping to liberate his people through education and peaceful progress, only to become a victim of colonial and clerical persecution.</p>
+                        </div>
+
+                        <div class="character-card">
+                            <h4>María Clara de los Santos</h4>
+                            <span class="character-role">Heroine &bull; Ibarra's Fiancée</span>
+                            <p>Admired for her beauty, piety, and grace, she symbolizes the Philippines under Spanish rule—pure and devoted, yet trapped by patriarchal and clerical control. She is later revealed to be Padre Dámaso's biological daughter.</p>
+                        </div>
+
+                        <div class="character-card">
+                            <h4>Elías</h4>
+                            <span class="character-role">Fugitive &bull; Voice of the Oppressed</span>
+                            <p>A noble, mysterious boatman whose family was ruined by injustices linked to Ibarra's ancestors. He repeatedly saves Ibarra's life and advocates for radical systemic change before dying for his friend.</p>
+                        </div>
+
+                        <div class="character-card">
+                            <h4>Padre Dámaso Verdolagas</h4>
+                            <span class="character-role">Antagonist &bull; Former Curate</span>
+                            <p>An arrogant, abusive, and racist Franciscan friar who ruled San Diego for twenty years. He orchestrated the desecration of Don Rafael's grave and vehemently opposes Ibarra's marriage to María Clara.</p>
+                        </div>
+
+                        <div class="character-card">
+                            <h4>Padre Bernardo Salví</h4>
+                            <span class="character-role">Antagonist &bull; San Diego Curate</span>
+                            <p>Dámaso's frail, cunning, and manipulative successor. Beneath his pious exterior, he harbors a secret obsession with María Clara and engineers the false rebellion that destroys Ibarra.</p>
+                        </div>
+
+                        <div class="character-card">
+                            <h4>Capitan Tiago (Don Santiago de los Santos)</h4>
+                            <span class="character-role">Wealthy Socialite</span>
+                            <p>A rich, subservient Filipino businessman who buys influence through lavish parties and church donations. He is the legal father of María Clara and readily bends to the will of the friars.</p>
+                        </div>
+
+                        <div class="character-card">
+                            <h4>Sisa, Crispín & Basilio</h4>
+                            <span class="character-role">Tragic Peasant Family</span>
+                            <p>Sisa is a loving mother driven to madness after her young sacristan sons are falsely accused of theft—Crispín is beaten to death in the convent, while Basilio escapes into the forest.</p>
+                        </div>
+
+                        <div class="character-card">
+                            <h4>Pilosopo Tasyo (Don Anastacio)</h4>
+                            <span class="character-role">Scholar & Eccentric Sage</span>
+                            <p>A brilliant philosopher regarded as a madman by the uneducated townsfolk. He serves as Ibarra's intellectual adviser, warning him of the dangers of challenging the friars.</p>
+                        </div>
+
+                        <div class="character-card">
+                            <h4>Doña Victorina de Espadaña</h4>
+                            <span class="character-role">Colonial Social Climber</span>
+                            <p>A flamboyant, delusional Filipina who denies her native heritage, speaks broken Spanish, and marries a lame Spanish quack doctor (Don Tiburcio) to elevate her social status.</p>
+                        </div>
+
+                        <div class="character-card">
+                            <h4>Doña Consolación</h4>
+                            <span class="character-role">The Alférez's Wife</span>
+                            <p>A vulgar, cruel former laundrywoman married to the Spanish head of the Civil Guard, notorious for her abusive treatment of Sisa and her bitter rivalry with Doña Victorina.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EL FILIBUSTERISMO DOSSIER -->
+                <div class="novel-dossier" id="fili-dossier">
+                    <div class="novel-dossier-header">
+                        <h2>El Filibusterismo (The Reign of Greed)</h2>
+                        <span>Published in Ghent, Belgium (1891)</span>
+                    </div>
+
+                    <div class="novel-summary-block">
+                        <h3>Plot Summary</h3>
+                        <p>Set thirteen years after the events of <em>Noli Me Tangere</em>, Crisóstomo Ibarra returns to the Philippines disguised as <strong>Simoun</strong>, a fabulously wealthy, bearded jeweler with tinted spectacles who has become the trusted adviser to the corrupt Spanish Governor-General. Hardened by betrayal and grief, Simoun abandons his earlier idealism for a ruthless plan of violent revolution.</p>
+                        <p>Simoun deliberately encourages the greed, corruption, and tyranny of colonial officials to push the Filipino masses toward armed rebellion. His twin goals are to topple the Spanish regime and rescue <strong>María Clara</strong> from the Santa Clara convent. Meanwhile, a group of idealistic university students—led by <strong>Basilio</strong> (now a graduating medical student) and <strong>Isagani</strong>—petition the government to establish a Spanish Language Academy, only to face bureaucratic deceit and suppression.</p>
+                        <p>Simoun's first uprising fails when he learns that María Clara has just died inside the convent. Months later, he devises a second, deadlier plot: planting a nitroglycerin-filled pomegranate lamp as a wedding gift at the lavish reception of Paulita Gómez and Juanito Peláez, intended to incinerate the colonial elite and trigger a city-wide revolt. However, Isagani—learning of the bomb from Basilio—rushes inside and throws the lamp into the river to save his former sweetheart, Paulita. Exposed and mortally wounded, Simoun flees to the coastal home of the virtuous Filipino priest <strong>Padre Florentino</strong>, where he confesses his true identity before dying. Padre Florentino casts Simoun's chest of jewels into the Pacific Ocean, declaring that freedom must be won through moral virtue and sacrifice rather than hatred and greed.</p>
+                    </div>
+
+                    <h3 class="characters-heading">Major Characters & Descriptions</h3>
+                    <div class="characters-grid">
+                        <div class="character-card">
+                            <h4>Simoun</h4>
+                            <span class="character-role">Protagonist &bull; The Jeweler</span>
+                            <p>The embittered alter ego of Crisóstomo Ibarra. Using his immense wealth and influence over the Governor-General, he fuels colonial corruption in order to ignite a bloody revolution and avenge his past.</p>
+                        </div>
+
+                        <div class="character-card">
+                            <h4>Basilio</h4>
+                            <span class="character-role">Medical Student &bull; Survivor</span>
+                            <p>The surviving son of Sisa, adopted and educated by Capitan Tiago. Initially focused solely on finishing his medical studies and marrying Juli, repeated injustices eventually push him to join Simoun's conspiracy.</p>
+                        </div>
+
+                        <div class="character-card">
+                            <h4>Isagani</h4>
+                            <span class="character-role">Poet &bull; Student Leader</span>
+                            <p>Basilio's idealistic best friend and nephew of Padre Florentino. Passionate and deeply patriotic, he champions the Spanish Language Academy and inadvertently foils Simoun's bombing plot out of love for Paulita Gómez.</p>
+                        </div>
+
+                        <div class="character-card">
+                            <h4>Kabesang Tales (Telesforo Juan de Dios)</h4>
+                            <span class="character-role">Dispossessed Farmer &bull; Rebel</span>
+                            <p>A hardworking farmer whose fertile land is unjustly seized by a religious order. Driven to ruin and robbed of his family's peace, he becomes the feared bandit leader <em>Matanglawin</em>.</p>
+                        </div>
+
+                        <div class="character-card">
+                            <h4>Juli (Juliana de Dios)</h4>
+                            <span class="character-role">Basilio's Fiancée</span>
+                            <p>The devoted daughter of Kabesang Tales who sells herself into domestic servitude to ransom her father from bandits. Trapped by Padre Camorra's predatory advances while trying to free Basilio, she leaps to her death from a convent window.</p>
+                        </div>
+
+                        <div class="character-card">
+                            <h4>Padre Florentino</h4>
+                            <span class="character-role">Virtuous Filipino Priest</span>
+                            <p>A compassionate, principled native secular priest who shelters the dying Simoun. He serves as Rizal's moral voice, emphasizing that true liberation requires redemption, integrity, and worthy youth.</p>
+                        </div>
+
+                        <div class="character-card">
+                            <h4>Padre Irene</h4>
+                            <span class="character-role">Manipulative Friar</span>
+                            <p>A hypocritical priest who pretends to support the students' Spanish Language Academy while secretly undermining it, and who later becomes Capitan Tiago's opium supplier and executor.</p>
+                        </div>
+
+                        <div class="character-card">
+                            <h4>Padre Camorra</h4>
+                            <span class="character-role">Antagonist &bull; Parish Priest</span>
+                            <p>An immoral, impulsive, and lustful friar in Tiani whose attempted assault on Juli leads directly to her tragic suicide.</p>
+                        </div>
+
+                        <div class="character-card">
+                            <h4>Paulita Gómez</h4>
+                            <span class="character-role">Isagani's Former Love</span>
+                            <p>A wealthy, pragmatic, and superficial young woman who abandons the idealistic Isagani to marry the spineless, affluent Juanito Peláez for social security.</p>
+                        </div>
+
+                        <div class="character-card">
+                            <h4>Placido Penitente</h4>
+                            <span class="character-role">Disillusioned Student</span>
+                            <p>A bright, diligent student from Batangas who grows disgusted by the humiliating, repressive teaching methods at the University of Santo Tomas and drops out, joining Simoun's cause.</p>
+                        </div>
+
+                        <div class="character-card">
+                            <h4>Don Custodio de Salazar</h4>
+                            <span class="character-role">Colonial Bureaucrat</span>
+                            <p>A self-important Spanish official nicknamed <em>Buena Tinta</em> ("Good Ink") who delays and ultimately rejects the students' proposal for the Spanish Language Academy.</p>
+                        </div>
+
+                        <div class="character-card">
+                            <h4>Ben Zayb</h4>
+                            <span class="character-role">Propagandist Journalist</span>
+                            <p>An arrogant, sycophantic Spanish writer who distorts news and flatters colonial authorities to protect the regime's image.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIMELINE PAGE -->
+        <section id="timeline" class="page-section">
+            <div class="section-header">
+                <div class="eyebrow">Historical Chronology</div>
+                <h1>A Life Through Time</h1>
+                <div class="ornament-divider">&#10086;</div>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">June 19, 1861</div>
+                        <h3>Birth in Calamba</h3>
+                        <p>José Rizal is born in Calamba, Laguna, as the seventh child of Francisco Mercado and Teodora Alonso.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">May 1882</div>
+                        <h3>Departure for Spain</h3>
+                        <p>Rizal leaves the Philippines secretly to study medicine and philosophy at the Universidad Central de Madrid.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">1887</div>
+                        <h3>Publication of Noli Me Tangere</h3>
+                        <p>His groundbreaking debut novel is published in Berlin, exposing the social corruption and abuses of Spanish colonial rule.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">1891</div>
+                        <h3>Publication of El Filibusterismo</h3>
+                        <p>His second novel is published in Ghent, Belgium, addressing the tragic themes of radical revolution and societal reform.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">July 1892</div>
+                        <h3>Return & Exile to Dapitan</h3>
+                        <p>Returns to Manila, founds La Liga Filipina, and is subsequently arrested and exiled to Dapitan in Mindanao.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">December 30, 1896</div>
+                        <h3>Martyrdom at Bagumbayan</h3>
+                        <p>Following a military trial, Rizal is executed by firing squad at Bagumbayan, sealing his legacy as the national hero.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEGACY PAGE -->
+        <section id="legacy" class="page-section">
+            <div class="section-header">
+                <div class="eyebrow">Enduring Impact</div>
+                <h1>The Legacy That Endures</h1>
+                <div class="ornament-divider">&#10086;</div>
+            </div>
+
+            <div class="legacy-editorial">
+                <div class="legacy-block">
+                    <h3>Education and Knowledge</h3>
+                    <p>Throughout his writings and personal endeavors, Rizal steadfastly maintained that education is the supreme instrument of national redemption. He believed that true freedom can only be achieved when citizens possess intellectual clarity, critical thinking, and moral integrity.</p>
+                </div>
+
+                <div class="legacy-block">
+                    <h3>Reform and National Consciousness</h3>
+                    <p>By articulating the systemic injustices of Spanish colonial rule, Rizal awakened a dormant national consciousness. His works united diverse islands and ethno-linguistic groups under a shared Filipino identity.</p>
+                </div>
+
+                <div class="legacy-block">
+                    <h3>Recognition as National Hero</h3>
+                    <p>Commemorated annually on Rizal Day (December 30) and honored by monuments across the globe, Rizal remains the quintessential symbol of peaceful patriotism, intellectual brilliance, and civic duty.</p>
+                </div>
+
+                <div class="reflection-box">
+                    <h3>A Reflection for Today</h3>
+                    <p>“How can the ideas and ideals of Dr. José Rizal inspire the next generation of Filipinos and global citizens to champion social justice, education, and responsible citizenship?”</p>
+                    <button class="btn reflection-btn" onclick="navigateTo('quiz')">Test Your Knowledge Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY PAGE -->
+        <section id="gallery" class="page-section">
+            <div class="section-header">
+                <div class="eyebrow">Visual Archives</div>
+                <h1>Fragments of History</h1>
+                <div class="ornament-divider">&#10086;</div>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox('images\Jose_Rizal_Portrait2.jpg', 'Dr. José Rizal Portrait', 'Classic portrait of Dr. José Rizal.')">
+                    <div class="gallery-img-wrap">
+                        <img class="joseRizalPortrait" src="images\Jose_Rizal_Portrait2.jpg" alt="Dr. José Rizal">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>José Rizal Portrait</h4>
+                        <p>Archival photographic portrait.</p>
+                    </div>
+                </div>
+                
+                 <div class="gallery-item" onclick="openLightbox('images\rizalBirthplace.jpg', 'The Birthplace of José Rizal', 'The ancestral home in Calamba, Laguna, where Dr. José Rizal was born on June 19, 1861, marking the beginning of the life of the Philippine national hero.')">
+                    <div class="gallery-img-wrap">
+                        <img src="images\rizalBirthplace.jpg" alt="Rizal's Birthplace">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>The Birthplace of José Rizal</h4>
+                        <p> Where the Hero was born.</p>
+                    </div>
+                </div>
+
+                 <div class="gallery-item" onclick="openLightbox('images\rizalMonument.jpg', 'Rizal Monument, Luneta', 'The Rizal Monument in Rizal Park, Manila.')">
+                    <div class="gallery-img-wrap">
+                        <img src="images\rizalMonument.jpg" alt="Rizal Monument">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Rizal Monument</h4>
+                        <p>Rizal Park, Manila.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox('images\noliMeTangere.jpg', 'Noli Me Tangere First Edition', 'First edition cover of Noli Me Tangere (1887).')">
+                    <div class="gallery-img-wrap">
+                        <img class="noliMeTangere" src="images\noliMeTangere.jpg" alt="Noli Me Tangere">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Noli Me Tangere (1887)</h4>
+                        <p>First edition book cover.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox('images\elFili.jpg', 'El Filibusterismo', 'A novel exposing Spanish oppression and corruption in the Philippines.')">
+                    <div class="gallery-img-wrap">
+                        <img class="" src="images\elFili.jpg" alt="Historical Illustration">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>El Filibusterismo (1891)</h4>
+                        <p>The Reign of Greed.</p>
+                    </div>
+                </div>
+                
+               <div class="gallery-item" onclick="openLightbox('images\miUltimoAdios.jpg', 'Mi Último Adiós (My Last Farewell)', 'Rizal’s final poem, written before his execution, expressing his love for the Philippines.')">
+                <div class="gallery-img-wrap">
+                        <img src="images\miUltimoAdios.jpg" alt="Rizal's Last Poem">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>Mi Último Adiós (My Last Farewell)</h4>
+                        <p> His famous farewell poem.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox('images\laLigaFilipina.jpg', 'La Liga Filipina', 'An organization founded by José Rizal to unite Filipinos and promote equality, peace, and national progress.')">
+                    <div class="gallery-img-wrap">
+                        <img src="images\laLigaFilipina.jpg" alt="La liga Filipina">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>La Liga Filipina (1892)</h4>
+                        <p>United Filipinos for peaceful reform.</p>
+                    </div>
+                </div>
+              
+                <div class="gallery-item" onclick="openLightbox('images\laSolidaridad.jpg', 'La Solidaridad', 'A newspaper founded in 1889 in Spain by Filipino reformists. It aimed to expose the injustices experienced by Filipinos under Spanish rule and promote equal rights, freedom, and reforms through peaceful means.')">
+                    <div class="gallery-img-wrap">
+                        <img src="images\laSolidaridad.jpg" alt="La Solidaridad">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>La Solidaridad</h4>
+                        <p>A newspaper fighting for Filipino rights.</p>
+                    </div>
+                </div>
+              
+                <div class="gallery-item" onclick="openLightbox('images\joseRizalExecution.jpg', 'The Execution of José Rizal', 'On December 30, 1896, José Rizal was executed by firing squad at Bagumbayan (now Rizal Park), Manila. His death became a symbol of courage, patriotism, and the Filipino peoples fight for freedom.')">
+                    <div class="gallery-img-wrap">
+                        <img src="images\joseRizalExecution.jpg" alt="La Solidaridad">
+                    </div>
+                    <div class="gallery-caption">
+                        <h4>The Execution of José Rizal</h4>
+                        <p>Executed on December 30, 1896.</p>
+                    </div>
+                </div>
+               
+                
+            </div>
+        </section>
+
+        <!-- QUIZ PAGE -->
+        <section id="quiz" class="page-section">
+            <div class="section-header">
+                <div class="eyebrow">Academic Assessment</div>
+                <h1>Test Your Historical Knowledge</h1>
+                <div class="ornament-divider">&#10086;</div>
+            </div>
+
+            <div class="quiz-wrapper">
+                <div id="quizContent">
+                    <div class="quiz-progress">
+                        <span id="questionCounter">Question 1 of 10</span>
+                        <span id="scoreTracker">Score: 0</span>
+                    </div>
+                    <div class="quiz-question-box">
+                        <h3 id="questionTitle">Loading question...</h3>
+                        <div class="options-list" id="optionsList"></div>
+                    </div>
+                    <div class="quiz-feedback" id="quizFeedback"></div>
+                    <button class="btn" id="nextQuestionBtn" style="display: none; width: 100%; margin-top: 1rem;" onclick="nextQuestion()">Next Question</button>
+                </div>
+
+                <div class="quiz-results" id="quizResults">
+                    <h2>Quiz Completed!</h2>
+                    <p id="finalScoreText" style="font-size: 1.2rem; margin-bottom: 1.5rem;"></p>
+                    <button class="btn" onclick="restartQuiz()">Try Again</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT PAGE -->
+        <section id="about" class="page-section">
+            <div class="section-header">
+                <div class="eyebrow">Project & Creator</div>
+                <h1>About the Developer</h1>
+                <img class="myProfilePic" src="images\geroFormal.jpg" alt="Profile of the developer">
+                <div class="ornament-divider">&#10086;</div>
+            </div>
+
+            <div class="about-wrapper">
+                <div class="about-grid">
+                    <!-- Developer Information -->
+                    <div class="about-card">
+                        <h3>Developer Information</h3>
+                        <div class="dev-detail-row">
+                            <span class="dev-detail-label">Name</span>
+                            <div class="dev-detail-value">Gero Asor</div>
+                        </div>
+                        <div class="dev-detail-row">
+                            <span class="dev-detail-label">Year &amp; Section</span>
+                            <div class="dev-detail-value">BAIT - 1A</div>
+                        </div>
+                        <div class="dev-detail-row">
+                            <span class="dev-detail-label">Project Title</span>
+                            <div class="dev-detail-value">José Rizal: Life, Works &amp; Legacy</div>
+                        </div>
+                         <div class="dev-detail-row">
+                            <span class="dev-detail-label">Favorite Thing:</span>
+                            <div class="dev-detail-value">Sumakses sa layf</div>
+                        </div>
+                    </div>
+
+                    <!-- Programming Languages Used -->
+                    <div class="about-card">
+                        <h3>Programming Languages Used</h3>
+                        <div class="lang-list">
+                            <div class="lang-item">
+                                <strong>HTML5 (HyperText Markup Language)</strong>
+                                <span>Structures the semantic sections, articles, navigation, and educational content of the web application.</span>
+                            </div>
+                            <div class="lang-item">
+                                <strong>CSS3 (Cascading Style Sheets)</strong>
+                                <span>Implements the historical parchment theme, responsive grid layouts, typography, and interactive animations.</span>
+                            </div>
+                            <div class="lang-item">
+                                <strong>JavaScript (ES6+)</strong>
+                                <span>Powers single-page navigation, literary works search and filtering, the image lightbox, and the interactive quiz engine.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reflection-editor-card">
+                    <h3>My Reflection on Noli Me Tangere and El Filibusterismo</h3>
+                    <div class="reflection-blank-space" id="developerReflection">
+                       <p>Watching Noli Me Tangere and El Filibusterismo by Dr. José Rizal was more than just learning about Philippine history. It was an opportunity to understand the struggles, sacrifices, and injustices that Filipinos experienced during the Spanish colonial period.
+                       Both films presented a society where power was abused, ordinary people were oppressed, and those who dared to speak the truth were often punished. What made these stories meaningful to me was realizing that the problems portrayed in the films were not simply 
+                       events of the past but reflections of issues that can still be observed in our society today.
+                       Although both novels share the same purpose of exposing the injustices of Spanish colonial rule,
+                       they communicate their messages in different ways. Noli Me Tangere focuses on awakening the Filipino people's awareness of the corruption and oppression surrounding them, while El Filibusterismo presents the consequences of continued injustice, discrimination,
+                       and the failure of peaceful reform.</p>
+                    </div>
+                </div>
+               
+                <div class="reflection-editor-card">
+                    <h3>What Is the Impact of Noli Me Tangere and El Filibusterismo to Me?</h3>
+                    <div class="reflection-blank-space" id="developerReflection">
+                       <p>These two works made me more aware of the importance of questioning injustice, recognizing corruption, and standing up for people whose voices are often ignored. They taught me that freedom is not simply about living in an independent country. True freedom also means having equal opportunities, receiving fair treatment, expressing one's opinions without fear, and living in a society where justice applies to everyone regardless of their social status.
+                       <p>As a university student, I was particularly inspired by Rizal's belief in education. His works reminded me that the knowledge I gain should not be used solely for personal success but also for the improvement of the community. Being an educated person means having the ability to think critically, recognize societal problems, and become part of the solution rather than remaining indifferent.</p> 
+                       <p>I also learned that meaningful change requires both courage and responsibility. I do not want to become like those who abuse their positions for personal gain, nor do I want to remain silent when I witness something wrong. Although I may not have the power to change the entire country immediately, I can begin by being honest, responsible, respectful, and aware of the issues affecting the people around me.</p>
+                       <p> Most importantly, these novels made me appreciate the sacrifices of Dr. José Rizal and other Filipinos who fought for the nation's freedom. Rizal used his intelligence, education, and writing to awaken the consciousness of his fellow countrymen. His example made me realize that even without political power or a high position, an individual can create a meaningful impact through knowledge, principles, and courage.</p></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REFERENCES PAGE -->
+        <section id="references" class="page-section">
+            <div class="section-header">
+                <div class="eyebrow">Academic Credibility</div>
+                <h1>References & Bibliography</h1>
+                <div class="ornament-divider">&#10086;</div>
+            </div>
+
+            <div class="references-content">
+                <h3>Primary Historical Institutions</h3>
+                <ul>
+                    <li>National Historical Commission of the Philippines (NHCP) — Archival collections and biographical records.</li>
+                    <li>National Library of the Philippines — Rare manuscripts, first editions of <em>Noli Me Tangere</em> and <em>El Filibusterismo</em>.</li>
+                </ul>
+
+                <h3>Academic References & Biographies</h3>
+                <ul>
+                    <li>Guerrero, León Ma. (1963). <em>The First Filipino: A Biography of José Rizal</em>. National Heroes Commission.</li>
+                    <li>Coates, Austin (1968). <em>Rizal: Philippine Nationalist and Martyr</em>. Oxford University Press.</li>
+                    <li>Zaide, Gregorio F., & Zaide, Sonia M. (1997). <em>Jose Rizal: Life, Works, and Writings of a Genius, Writer, Scientist, and National Hero</em>. All-Nations Publishing.</li>
+                </ul>
+
+                <h3>Image Credits</h3>
+                <ul>
+                    <li>Wikimedia Commons — Public domain historical photographs and book covers under Creative Commons licenses.</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-ornament">&#10086; &#10086; &#10086;</div>
+            <p><strong>José Rizal: Life, Works & Legacy</strong> &bull; A digital museum and educational archive dedicated to the Philippine national hero.</p>
+            <ul class="footer-links">
+                <li><a href="#" onclick="navigateTo('home')">Home</a></li>
+                <li><a href="#" onclick="navigateTo('biography')">Biography</a></li>
+                <li><a href="#" onclick="navigateTo('works')">Literary Works</a></li>
+                <li><a href="#" onclick="navigateTo('timeline')">Timeline</a></li>
+                <li><a href="#" onclick="navigateTo('legacy')">Legacy</a></li>
+                <li><a href="#" onclick="navigateTo('gallery')">Gallery</a></li>
+                <li><a href="#" onclick="navigateTo('quiz')">Quiz</a></li>
+                <li><a href="#" onclick="navigateTo('about')">About</a></li>
+                <li><a href="#" onclick="navigateTo('references')">References</a></li>
+            </ul>
+            <p style="font-size: 0.85rem; color: var(--aged-paper);">&copy; 2026 The Life, Works and Writings of Dr. Jose Rizal Project. Quezon City University. All historical texts and public domain images curated for academic study.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightboxDirect()">&times;</button>
+            <img src="" alt="" class="lightbox-img" id="lightboxImg">
+            <div class="lightbox-details">
+                <h3 id="lightboxTitle"></h3>
+                <p id="lightboxDesc"></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
