@@ -459,9 +459,11 @@ main {
 
 .works-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
     gap: 2rem;
     margin-bottom: 3.5rem;
+    width: 100%;
+    min-width: 0;
 }
 
 .work-card {
@@ -519,6 +521,8 @@ main {
     padding: 2.5rem;
     margin-bottom: 3rem;
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    width: 100%;
+    min-width: 0;
 }
 
 .novel-dossier-header {
@@ -574,8 +578,10 @@ main {
 
 .characters-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 1.2rem;
+    width: 100%;
+    min-width: 0;
 }
 
 .character-card {
@@ -1199,4 +1205,177 @@ footer {
         border-left: none !important;
         border-right: 10px solid var(--aged-paper) !important;
     }
+
+    
+/* =========================================
+   LITERARY WORKS - MOBILE RESPONSIVENESS
+   Optimized for 360px phone screens
+========================================= */
+
+@media screen and (max-width: 480px) {
+
+    /* Prevent elements from exceeding their containers */
+    main,
+    .page-section,
+    #works {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    main {
+        padding: 1.2rem 12px;
+    }
+
+    /* Section heading */
+    #works .section-header h1 {
+        font-size: 2rem;
+        overflow-wrap: break-word;
+    }
+
+    #works .section-header {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Search and filter controls */
+    .filter-controls {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .search-input {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .filter-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .filter-btn {
+        font-size: 12px;
+        padding: 8px 10px;
+        max-width: 100%;
+    }
+
+    /* Literary works cards */
+    .works-grid {
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        min-width: 0;
+        gap: 1rem;
+    }
+
+    .work-card {
+        width: 100%;
+        min-width: 0;
+        padding: 1.2rem;
+    }
+
+    .work-card h3 {
+        font-size: 1.5rem;
+        overflow-wrap: break-word;
+    }
+
+    .work-card p {
+        font-size: 0.9rem;
+        overflow-wrap: anywhere;
+    }
+
+    .work-card .btn {
+        width: 100%;
+        padding: 0.7rem 0.5rem;
+        font-size: 0.85rem;
+        white-space: normal;
+    }
+
+    /* Novel summaries */
+    .novels-deep-dive {
+        width: 100%;
+        min-width: 0;
+        padding-top: 2rem;
+    }
+
+    .novel-dossier {
+        width: 100%;
+        min-width: 0;
+        padding: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .novel-dossier-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .novel-dossier-header h2 {
+        font-size: 1.7rem;
+        overflow-wrap: anywhere;
+    }
+
+    .novel-dossier-header span {
+        font-size: 0.85rem;
+    }
+
+    .novel-summary-block {
+        width: 100%;
+        min-width: 0;
+        padding: 1rem;
+    }
+
+    .novel-summary-block p {
+        font-size: 0.9rem;
+        overflow-wrap: anywhere;
+    }
+
+    /* Character profiles */
+    .characters-heading {
+        font-size: 1.4rem;
+    }
+
+    .characters-grid {
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        min-width: 0;
+        gap: 1rem;
+    }
+
+    .character-card {
+        width: 100%;
+        min-width: 0;
+        padding: 1rem;
+    }
+
+    .character-card h4 {
+        font-size: 1.2rem;
+        overflow-wrap: anywhere;
+    }
+
+    .character-card p {
+        font-size: 0.88rem;
+        overflow-wrap: anywhere;
+    }
+
+    .character-role {
+        font-size: 0.7rem;
+        overflow-wrap: anywhere;
+    }
+
+    /* Prevent grid children from forcing overflow */
+    .works-grid > *,
+    .characters-grid > *,
+    .novel-dossier > * {
+        min-width: 0;
+    }
+
+}
+
 }
